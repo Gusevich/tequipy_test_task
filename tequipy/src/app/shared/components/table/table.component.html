@@ -1,0 +1,15 @@
+<mat-table [dataSource]="dataSource" matSort>
+  @for (column of displayedColumns; track column) {
+  <ng-container [matColumnDef]="column">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>
+      {{ column | titlecase }}
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+     {{ element[column] }}
+    </mat-cell>
+  </ng-container>
+  }
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns" (click)="rowClick(row)"></mat-row>
+</mat-table>

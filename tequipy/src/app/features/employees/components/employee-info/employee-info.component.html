@@ -1,0 +1,28 @@
+<button class="employee-info-back" (click)="goBack()">< Back</button>
+@if (employee$ | async; as employee) {
+<div class="employee-info">
+  <div class="employee-info-offboard">
+    <h1>{{ employee.name }}</h1>
+    <button [disabled]="employee.status === 'OFFBOARDED'"
+            (click)="openModal(employee)">Offboard</button>
+  </div>
+  <p class="employee-info-details-title">Employee Details</p>
+  <div class="employee-info-details">
+    <div class="employee-info-details-item">
+      <span><b>Name:</b> {{ employee.name }}</span>
+    </div>
+    <div class="employee-info-details-item">
+      <span><b>Email:</b> {{ employee.email }}</span>
+    </div>
+    <div class="employee-info-details-item">
+      <span><b>Department:</b> {{ employee.department }}</span>
+    </div>
+  </div>
+  <p class="employee-info-equipment-title">Equipment</p>
+  <div class="employee-info-equipment">
+    @for (equipment of employee.equipments; track equipment.id) {
+      <p class="employee-info-equipment-item">{{ equipment.name }}</p>
+    }
+</div>
+</div>
+}

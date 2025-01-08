@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Offboard</h1>
+<div mat-dialog-content>
+  <form [formGroup]="offboardingForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Street Address</mat-label>
+      <input matInput formControlName="streetLine1" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Country</mat-label>
+      <input matInput formControlName="country" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Postal Code</mat-label>
+      <input matInput formControlName="postalCode" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Receiver</mat-label>
+      <input matInput formControlName="receiver" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Notes</mat-label>
+      <textarea matInput formControlName="notes"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button type="submit" color="primary" (click)="onSubmit()">Submit</button>
+</div>

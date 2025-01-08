@@ -2,12 +2,13 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 
 @Component({
-  selector: 'tequipy-root',
+  selector: 'tequipy-employees',
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  templateUrl: './employees.component.html',
+  styleUrl: './employees.component.scss',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
+export class EmployeesComponent {
+
 }

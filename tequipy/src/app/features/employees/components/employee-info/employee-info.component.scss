@@ -1,0 +1,48 @@
+:host {
+  .employee-info {
+    button[disabled] {
+      border: 1px solid #999999;
+      background-color: #cccccc;
+      color: #666666;
+    }
+
+    &-back {
+      border: none;
+      background: inherit;
+      margin-bottom: 50px;
+      font-weight: 800;
+    }
+
+    &-offboard {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        padding: 10px 25px;
+        border-radius: 14px;
+        border: none;
+        background: #ff9629;
+        font-weight: 800;
+      }
+    }
+
+    &-details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &-details-title, &-equipment-title {
+      margin: 50px 0 15px;
+      border-bottom: 3px solid #ff9629;
+    }
+
+    &-details-item, &-equipment-item {
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid lightgrey;
+      padding: 8px 0;
+    }
+  }
+}
